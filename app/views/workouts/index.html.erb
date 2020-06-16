@@ -1,0 +1,32 @@
+
+
+<h1>Workout</h1>
+
+<div class="container">
+  <h1 class="title-offers">All the available workouts</h1>
+  <div class="grid-container">
+    <%@workouts.each do |workout|%>
+    <div class="card-trip">
+      <%# if workout.photo.attached? %>
+      <%#= cl_image_tag workout.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face %>
+      <%# else %>
+      <%= image_tag "https://images.unsplash.com/photo-1532384748853-8f54a8f476e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80", opacity: 0.9, crop: :thumb, width: 150, height: 150 %>
+      <%# end %>
+      <div class="card-content">
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= workout.sport %></h2>
+          </div>
+          <h2 class="card-trip-pricing"><%= workout.duration %> min</h2>
+        </div>
+        <div class="button-offer-container">
+          <%=link_to "Check Workout", workout_path(workout), class: "btn button-offer" %>
+        </div>
+      </div>
+    </div>
+
+  <%end%>
+  </div>
+</div>
+
+
