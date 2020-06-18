@@ -15,9 +15,10 @@
       <div class="card-content">
         <div class="card-trip-infos">
           <div>
-            <h2><%= workout.sport %></h2>
+            <h2><%= workout.title %></h2>
           </div>
           <h2 class="card-trip-pricing"><%= workout.duration %> min</h2>
+          <h2><%= workout.sport %></h2>
         </div>
         <div class="button-offer-container">
           <%=link_to "Check Workout", workout_path(workout), class: "btn button-offer" %>
