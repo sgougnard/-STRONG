@@ -1,2 +1,50 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+  <section class="jumbotron text-center" style="background-image: url('<%= cloudinary_url("https://res.cloudinary.com/dku8zy35b/image/upload/v1592578733/e4xidmvfmj8k3a52g8n8vohkl9nm.jpg", gravity: :center, :resource_type => :raw) %>');object-fit:cover;">
+    <!--<div class="container">-->
+      <div class="content">
+        <h1>Together Working Stronger</h1>
+        <p class="lead text">Achieve your optimal work-life balance</p>
+        <br>
+        <p>
+          <!-- <form novalidate="novalidate" class="simple_form search" action="/flats?city=Marbella" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+            <div class="search-form-control form-group">
+              <%#= form_tag flats_path, method: :get do %>
+                <%#= text_field_tag :query,
+                  params[:query],
+                  class: "form-control",
+                  placeholder: "Enter your city"
+                %>
+              <%# end %>
+            </div>
+          </form> -->
+        </p>
+      </div>
+  </section>
+<div class="container">
+    <h2 class="title-new-listings">Top rated Workouts</h2>
+    <div class="grid-container">
+      <%@workouts.each do |workout|%>
+        <%= link_to workout_path(workout), class: "card-link" do %>
+          <div class="card-trip">
+            <%# if workout.photos.attached? %>
+              <%#= cl_image_tag workout.photos %>
+            <%# else %>
+              <%= image_tag "https://images.unsplash.com/photo-1532384748853-8f54a8f476e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80", opacity: 0.9, crop: :thumb, width: 150, height: 150 %>
+            <%# end %>
+            <div class="card-content">
+              <div class="card-trip-infos">
+                <div>
+                  <h2><%= workout.title %></h2>
+                  <div class="city-info">
+                    <i class="fas fa-dumbbell"></i><p><%=workout.sport%></p>
+                  </div>
+                </div>
+              <h2 class="card-trip-pricing"><%= workout.duration %> min</h2>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <%end%>
+    </div>
+  </div>
+</main>

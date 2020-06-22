@@ -1,6 +1,14 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background-color: #F4F4F4;
+  transition: 0.5s background-color ease;
+  top: 0;
+  opacity: 0.8;
+}
+
+
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+  color: brown;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +16,21 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 60px;
+  margin-left: 10px;
+}
+
+@media (min-width: 800px) {
+  li.nav-item {
+    display: flex;
+  }
+}
+
+.navbar-lewagon-white {
+  background-color: white;
+  z-index: 2;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  .nav-link {
+    color: brown !important;
+  }
 }

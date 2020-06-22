@@ -11,3 +11,21 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+.jumbotron {
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: 40%;
+  color: white;
+  height: 100vh;
+  // padding-top: 40vh;
+  top:0;
+}
+.top_container{
+  height: 100px;
+}
+.content{
+  position: relative;
+  top: 30%;
+}
