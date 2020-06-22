@@ -35,8 +35,8 @@
   min-width: 60px;
 }
 
-.fa-city {
-  color: #6CBDB7;
+.fa-dumbbell {
+  color: brown;
   margin-right: 5px;;
 }
 
@@ -107,3 +107,6 @@
   padding: 16px;
 }
 
+.card-link + .card-link {
+  margin-left: 0;
+}
